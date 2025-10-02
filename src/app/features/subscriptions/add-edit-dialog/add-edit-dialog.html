@@ -1,1 +1,51 @@
-<p>add-edit-dialog works!</p>
+<h2 mat-dialog-title>
+    {{ data.mode === 'add' ? 'New Subscription': 'Edit a Subscription' }}
+  </h2>
+  
+  <mat-dialog-content>
+    <form [formGroup]="form"> 
+      <mat-label class="label">Name</mat-label>
+      <mat-form-field appearance="outline" class="full-width">
+        <input matInput formControlName="name" placeholder="Ex: Netflix">
+      </mat-form-field>
+      <div class="row">
+        <div class="half-width">
+            <mat-label class="label">Category</mat-label>
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-select formControlName="category" >
+                    <mat-option *ngFor="let cat of categories" [value]="cat">{{cat}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div  class="half-width">
+            <mat-label class="label">Cycle</mat-label>
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-select formControlName="cycle">
+                    <mat-option value="monthly">Monthly</mat-option>
+                    <mat-option value="yearly">Yearly</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+      </div>
+
+      <mat-label class="label">Price (€)</mat-label>
+      <mat-form-field appearance="outline" class="full-width">
+        <input matInput type="number" formControlName="price">
+      </mat-form-field>
+      
+      <mat-label class="label">Status</mat-label>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-select formControlName="status">
+          <mat-option value="active">Active</mat-option>
+          <mat-option value="paused">Paused</mat-option>
+          <mat-option value="canceled">Canceled</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions align="end">
+    <button mat-button (click)="close()">Cancel</button>
+    <button mat-flat-button color="primary" (click)="save()">Save</button>
+  </mat-dialog-actions>
+  

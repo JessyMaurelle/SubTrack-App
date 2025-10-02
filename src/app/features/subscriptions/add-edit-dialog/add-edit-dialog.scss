@@ -1,0 +1,67 @@
+/* Met un peu d'espace entre les champs */
+mat-form-field.full-width {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  /* Titre du dialog */
+  h2[mat-dialog-title] {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+   /* Labels du dialog */
+   .label {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-style: normal;
+   
+  }
+  
+  /* Contenu du dialog */
+  mat-dialog-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  
+  /* Actions alignées proprement */
+  mat-dialog-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+  
+
+  /* Pour différencier le bouton Annuler */
+  mat-dialog-actions button[mat-button] {
+    color: black; /* gris Material */
+    font-weight: 400;
+  }
+  
+  mat-dialog-actions button[mat-flat-button] {
+    font-weight: 400;
+    background-color: black;
+    color: aliceblue;
+  }
+  mat-dialog-actions button {
+    flex: 0 0 120px; /* largeur fixe */
+    width: 100%;
+    min-width: 140px;     /* largeur */
+    min-height: 48px;     /* hauteur → même taille que tes inputs */
+    font-size: 15px;      /* texte un peu plus grand */
+    border-radius: 5px;   /* arrondi pour rappeler les champs */
+    text-transform: none; /* évite le tout MAJUSCULE */
+    box-shadow: none;   /* enlève l'ombre */
+  border: none;   
+  }
+  
+  .row{
+    display: flex;
+    gap: 16px;
+  }
+  .half-width {
+    flex: 1; /* chaque champ prend 50% de la ligne */
+  }

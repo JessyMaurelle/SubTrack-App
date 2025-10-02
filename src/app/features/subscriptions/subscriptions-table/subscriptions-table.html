@@ -28,22 +28,22 @@
         <mat-option value="active">Active</mat-option>
         <mat-option value="paused">Paused</mat-option>
         <mat-option value="canceled">Canceled</mat-option>
-    </mat-select>
-  </mat-form-field>
-
+      </mat-select>
+    </mat-form-field>
+  </div>
   <!-- Bouton Réinitialise -->
   <div class="filter-field">
     <button mat-stroked-button color="primary" (click)="resetFilters()">
       Réinitialise
     </button>
-   </div>
+  </div>
 </div>
 
 
 <mat-toolbar color="primary">
   <span class="abo">Abonnements</span>
   <span class="spacer"></span>
-  <button mat-raised-button color="accent"><mat-icon>add</mat-icon>Ajouter</button>
+  <button mat-raised-button color="accent" (click)="onAdd()"><mat-icon>add</mat-icon>Ajouter</button>
 </mat-toolbar>
 
 
@@ -72,7 +72,7 @@
     <th mat-header-cell *matHeaderCellDef mat-sort-header >
       Cycle
     </th>
-    <td mat-cell *matCellDef="let row"> {{row.cycle === 'monthly'?'Monthly':'Yearly' }} </td>
+    <td mat-cell *matCellDef="let row"> {{row.cycle?.toLowerCase() === 'monthly'?'Monthly':'Yearly' }} </td>
   </ng-container>
 
   <!-- Price Column -->
@@ -88,7 +88,7 @@
     <th mat-header-cell *matHeaderCellDef mat-sort-header >
       NextChargeDate
     </th>
-    <td mat-cell *matCellDef="let row"> {{row.nextChargeDate}} </td>
+    <td mat-cell *matCellDef="let row"> {{row.nextChargeDate | date:'dd/MM/yyyy'}} </td>
   </ng-container>
 
     <!-- Status Column -->

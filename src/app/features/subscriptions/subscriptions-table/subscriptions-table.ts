@@ -15,14 +15,17 @@ import { MatToolbar } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { MatChipsModule } from '@angular/material/chips';
-
+import { AddEditDialog } from '../add-edit-dialog/add-edit-dialog';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { ConfirmDialog } from '../confirm-dialog/confirm-dialog';
 
 
 @Component({
   selector: 'app-subscriptions-table',
   imports: [CommonModule,
     MatTableModule, MatPaginatorModule, MatSortModule, MatFormFieldModule, MatInputModule,
-    MatIconModule, MatButtonModule, MatTooltipModule, MatToolbar, MatOptionModule, MatSelectModule, MatChipsModule],
+    MatIconModule, MatButtonModule, MatTooltipModule, MatToolbar, MatOptionModule, MatSelectModule, MatChipsModule, MatSnackBarModule],
   templateUrl: './subscriptions-table.html',
   styleUrl: './subscriptions-table.scss'
 })
@@ -30,6 +33,8 @@ export class SubscriptionsTable implements OnInit {
 
   public subscriptions :Subscription[] =[] ;
   private api = inject(Subscriptions);
+  private dialog = inject(MatDialog);
+  private snackBar = inject(MatSnackBar);
 
   dataSource = new MatTableDataSource<Subscription>([]);
   loading = true;
@@ -66,11 +71,69 @@ private load():void{
   })
 }
 
-onEdit(row:Subscription){
-
+showMessage(message: string, type: 'success' | 'error') {
+  this.snackBar.open(message, 'Close', {
+    duration: 3000,
+    horizontalPosition: 'right',
+    verticalPosition: 'top',
+    panelClass: type === 'success' ? ['success-snackbar'] : ['error-snackbar']
+  });
 }
 
-onDelete(row:Subscription){}
+onAdd(){
+  const dialogRef = this.dialog.open(AddEditDialog, {
+    width:'1000px',
+    data: { mode:'add', categories: this.categories}
+  });
+  dialogRef.afterClosed().subscribe(result=>{
+    if(result){
+      this.api.createSubscription(result).subscribe(()=> {
+        this.load();
+        this.showMessage('✅ Subscription added successfully!', 'success');
+    });
+    }
+  });
+}
+
+onEdit(row:Subscription){
+  const dialogRef = this.dialog.open(AddEditDialog, {
+    width:'1000px',
+    data: { mode:'edit',subscription: row, categories: this.categories}
+  });
+  dialogRef.afterClosed().subscribe(result=>{
+    if(result){
+      this.api.updateSubscription(row.id,result).subscribe(()=> {
+        this.load();
+        this.showMessage('✅ Subscription updated successfully!', 'success');
+    });
+    }
+  });
+}
+
+onDelete(row:Subscription){
+ /* if (confirm(`Delete subscription "${row.name}" ?`)) {
+    this.api.deleteSubscription(row.id).subscribe(() => {
+      this.load();
+      this.showMessage('🗑️ Subscription deleted!', 'error');
+    });
+  }*/
+
+      const dialogRef = this.dialog.open(ConfirmDialog, {
+        width: '300px',
+        data: { message: `Delete subscription "${row.name}" ?` }
+      });
+    
+      dialogRef.afterClosed().subscribe(result => {
+        if (result) {
+          this.api.deleteSubscription(row.id).subscribe(() => {
+            this.load();
+            this.showMessage('🗑️ Subscription deleted!', 'error');
+          });
+        }
+      });
+    
+    
+}
 
 applyFilter(event: Event){
   const filterValue = (event?.target as HTMLInputElement).value.trim().toLowerCase();

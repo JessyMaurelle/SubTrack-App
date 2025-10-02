@@ -5,6 +5,10 @@
   flex: auto;
   margin: 5px;
 }
+.filters{
+    display: flex;
+    gap: 16px;
+}
 button[mat-stroked-button] {
     border-radius: 5px;
 }
@@ -23,15 +27,16 @@ button[mat-raised-button]{
     color:black;
 } 
 mat-chip {
-    color: #fff;
+    color: #fff !important; ;
     font-weight: 600;
-    border-radius: 40px;
+    
     padding: 4px 12px;
   }
   
   /* Couleurs par statut */
   ::ng-deep  mat-chip.active {
-    background-color: #22c55e !important; /* vert */
+    background-color: #1E3A8A !important; /* vert */
+    color: #fff !important; ;
   }
   
   ::ng-deep  mat-chip.paused {
@@ -49,3 +54,16 @@ mat-chip {
   button[mat-icon-button].delete-btn .mat-icon {
     color: #e53935; /* rouge Material */
   }
+
+  .success-snackbar {
+    background-color: #4caf50 !important; /* vert */
+    color: #fff !important;
+    font-weight: 600;
+  }
+  
+  .error-snackbar {
+    background-color: #f44336 !important; /* rouge */
+    color: #fff !important;
+    font-weight: 600;
+  }
+  
