@@ -10,4 +10,5 @@ export interface Subscription {
     lastPrice?: number;
     createdAt: string;
     updatedAt: string;
+    oldPrice?: number;  
 }

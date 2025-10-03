@@ -46,8 +46,16 @@ export class AddEditDialog {
   save() {
     if (this.form.valid) {
       //this.dialogRef.close(this.form.value);
-       // Si pas de date saisie, on calcule automatiquement
-       const subscription = this.form.value;
+      const subscription = this.form.value;
+       // Si on est en édition et que le prix a changé pour la hausse
+    if (this.data.mode === 'edit' && this.data.subscription) {
+      if (subscription.price !== this.data.subscription.price) {
+        // Sauvegarde l'ancien prix avant de remplacer
+        subscription.oldPrice = this.data.subscription.price;
+      }
+    }
+       // Si pas de date saisie, on calcule automatiquement la nextChargeDate
+      
     if (!subscription.nextChargeDate) {
       const today = new Date();
       if (subscription.cycle.toLowerCase() === 'monthly') {

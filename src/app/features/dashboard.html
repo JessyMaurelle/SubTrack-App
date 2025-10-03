@@ -1,1 +1,37 @@
-<p>dashboard works!</p>
+
+<div class="dashboard">
+    <div class="cards">
+      <div class="card">
+        <h3>Total monthly</h3>
+        <p>{{  totalMonthly | number:'1.2-2'  }} €</p>
+      </div>
+      <div class="card">
+        <h3>Total yearly</h3>
+        <p>{{ totalYearly  | number:'1.2-2'  }} €</p>
+      </div>
+      <div class="card">
+        <h3>PriceIncrease</h3>
+        <p>{{ priceIncrease }}</p>
+      </div>
+    </div>
+  
+    <div class="content">
+      <div class="a-venir">
+        <h3>Next Subscriptions</h3>
+        <ul>
+          <li *ngFor="let sub of next">
+            <span>{{ sub.name }}</span>
+            <span>{{ sub.nextChargeDate | date:'dd/MM/yyyy' }}</span>
+            <span>{{ sub.price  | number:'1.2-2'  }} €</span>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="astuce">
+        <h3>Astuce</h3>
+        <p>La page <b>Subscriptions</b> contient toute la gestion (CRUD).  
+           Le Dashboard est un aperçu rapide.</p>
+      </div>
+    </div>
+  </div>
+  

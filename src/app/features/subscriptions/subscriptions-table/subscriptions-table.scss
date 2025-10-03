@@ -66,4 +66,40 @@ mat-chip {
     color: #fff !important;
     font-weight: 600;
   }
+
+  /* Prix barré en gris */
+.old-price {
+    text-decoration: line-through;
+    color: #9ca3af; /* gris clair */
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  
+  /* Nouveau prix en gras */
+  .new-price {
+    font-weight: 600;
+    color: #111827; /* gris foncé proche noir */
+    font-size: 15px;
+  }
+  
+  /* Badge rouge Hausse */
+  .badge.hausse {
+    background-color: #dc2626; /* rouge vif */
+    color: #fff !important;
+    font-weight: 600;
+    padding: 2px 8px;
+    
+    font-size: 12px;
+    margin-left: 8px;
+  }
+  
+    /* Badge red soon */
+    .badge-soon {
+       background-color: #ef4444;
+        font-weight: 600;
+        padding: 2px 8px;
+        
+        font-size: 12px;
+        margin-left: 8px;
+      }
   

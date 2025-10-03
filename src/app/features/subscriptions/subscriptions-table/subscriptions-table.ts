@@ -44,6 +44,7 @@ export class SubscriptionsTable implements OnInit {
   selectedCategory = '';
   selectedStatus= '';
   searchValue = '';
+  nextFive: string[] = [];
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator! : MatPaginator;
 
@@ -67,8 +68,15 @@ private load():void{
       this.dataSource.data = rows ?? [];
       this.loading = false;
     console.log('rows', rows);
+
+    // for the 5 next abos per date
+    this.nextFive = [...this.dataSource.data]
+    .filter(s=> s.nextChargeDate)
+    .sort((a, b) => new Date(a.nextChargeDate).getTime() - new Date(b.nextChargeDate).getTime())
+    .slice(0, 5)
+    .map(s=>s.id);
   }
-  })
+  });
 }
 
 showMessage(message: string, type: 'success' | 'error') {

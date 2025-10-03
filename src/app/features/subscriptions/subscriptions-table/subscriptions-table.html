@@ -80,7 +80,18 @@
     <th mat-header-cell *matHeaderCellDef mat-sort-header >
       Price
     </th>
-    <td mat-cell *matCellDef="let row"> {{row.price}} {{row.currency || 'EUR'}}</td>
+    <td mat-cell *matCellDef="let row"> 
+        <!-- Si on a un oldPrice -->
+    <span *ngIf="row.oldPrice && row.price > row.oldPrice" class="price-change">
+      <span class="old-price">{{ row.oldPrice | number:'1.2-2' }} €</span>
+      <span class="new-price">{{ row.price | number:'1.2-2' }} €</span>
+      <mat-chip class="badge hausse">↑ Increase</mat-chip>
+    </span>
+    <!-- Sinon prix normal-->
+     <span *ngIf="!row.oldPrice || row.price<= row.oldPrice">
+    {{row.price| number:'1.2-2' }} €
+     </span>
+     </td>
   </ng-container>
 
   <!-- NextChargeDate Column -->
@@ -88,7 +99,12 @@
     <th mat-header-cell *matHeaderCellDef mat-sort-header >
       NextChargeDate
     </th>
-    <td mat-cell *matCellDef="let row"> {{row.nextChargeDate | date:'dd/MM/yyyy'}} </td>
+    <td mat-cell *matCellDef="let row"> {{row.nextChargeDate | date:'dd/MM/yyyy'}}
+      <!-- Badge Bientôt -->
+    <mat-chip *ngIf="nextFive.includes(row.id)" class="badge-soon">
+      Very Soon
+    </mat-chip>
+   </td>
   </ng-container>
 
     <!-- Status Column -->

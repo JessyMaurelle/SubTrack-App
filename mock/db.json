@@ -1,17 +1,15 @@
 {
   "subscriptions": [
     {
-      "id": "1",
       "name": "Netflix",
       "category": "Streaming",
       "cycle": "Monthly",
-      "price": 12.99,
+      "price": 22,
       "currency": "EUR",
-      "nextChargeDate": "2025-09-25",
       "status": "Active",
-      "lastPrice": 11.99,
-      "createdAt": "2025-05-01T10:00:00Z",
-      "updatedAt": "2025-09-01T10:00:00Z"
+      "oldPrice": 12.99,
+      "nextChargeDate": "2025-11-03",
+      "id": "1"
     },
     {
       "id": "2",
@@ -29,10 +27,10 @@
       "name": "n",
       "category": "Streaming",
       "cycle": "monthly",
-      "price": 0,
+      "price": 85,
       "currency": "EUR",
       "status": "active",
-      "nextChargeDate": "2025-10-30",
+      "nextChargeDate": "2025-11-03",
       "id": "5"
     },
     {
@@ -86,14 +84,14 @@
       "id": "823a"
     },
     {
-      "id": "be93",
-      "name": "lk",
+      "id": "9478",
+      "name": "fitx",
       "category": "Streaming",
       "cycle": "monthly",
-      "price": 0,
+      "price": 20,
       "currency": "EUR",
-      "status": "canceled",
-      "nextChargeDate": "2025-11-01"
+      "status": "active",
+      "nextChargeDate": "2025-11-03"
     }
   ]
 }
