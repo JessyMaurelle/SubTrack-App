@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { Subscriptions } from './subscriptions/subscriptions';
 import { Subscription } from './subscriptions/subscriptions.model';
 import { CommonModule, DatePipe, CurrencyPipe, NgFor } from '@angular/common';
+import { SettingService } from './setting-service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,6 +12,7 @@ import { CommonModule, DatePipe, CurrencyPipe, NgFor } from '@angular/common';
 })
 export class Dashboard {
   private api = inject(Subscriptions);
+  settings = inject(SettingService);
 
   subscriptions: Subscription[] = [];
   totalYearly = 0;

@@ -1,1 +1,23 @@
-<p>settings works!</p>
+<div class="settings-container">
+    <mat-card class="setting-card">
+      <h2>Language</h2>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-select [value]="settings.language" (selectionChange)="onLanguageChange($event.value)">
+            <mat-option value="fr">Englisch</mat-option>
+            <mat-option value="de">Deutsch</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card>
+  
+    <mat-card class="setting-card">
+      <h2>Currency</h2>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-select [value]="settings.currency" (selectionChange)="onCurrencyChange($event.value)">
+            <mat-option value="EUR">EUR (€)</mat-option>
+            <mat-option value="USD">USD ($)</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card>
+  </div>
+  
+ 

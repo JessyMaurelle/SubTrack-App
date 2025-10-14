@@ -53,6 +53,7 @@ export class AddEditDialog {
         // Sauvegarde l'ancien prix avant de remplacer
         subscription.oldPrice = this.data.subscription.price;
       }
+    
     }
        // Si pas de date saisie, on calcule automatiquement la nextChargeDate
       

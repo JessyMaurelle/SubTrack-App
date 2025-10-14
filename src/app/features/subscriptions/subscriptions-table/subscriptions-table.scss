@@ -24,7 +24,7 @@ button[mat-stroked-button] {
 button[mat-raised-button]{
     border-radius: 15px;
     background-color:lightgray;
-    color:black;
+    color: #111827;
 } 
 mat-chip {
     color: #fff !important; ;
@@ -35,12 +35,13 @@ mat-chip {
   
   /* Couleurs par statut */
   ::ng-deep  mat-chip.active {
-    background-color: #1E3A8A !important; /* vert */
-    color: #fff !important; ;
+    background-color: #111827 !important; /* vert */
+    color: #fff !important; 
   }
   
   ::ng-deep  mat-chip.paused {
-    background-color: #f97316 !important; /* orange */
+    background-color: lightgray !important; /* orange */
+    color: #111827 !important;
   }
   
   ::ng-deep mat-chip.canceled {

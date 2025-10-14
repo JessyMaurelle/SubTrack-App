@@ -37,13 +37,13 @@ mat-form-field.full-width {
 
   /* Pour différencier le bouton Annuler */
   mat-dialog-actions button[mat-button] {
-    color: black; /* gris Material */
+    color: #111827;/* gris Material */
     font-weight: 400;
   }
   
   mat-dialog-actions button[mat-flat-button] {
     font-weight: 400;
-    background-color: black;
+    background-color: #111827;
     color: aliceblue;
   }
   mat-dialog-actions button {
