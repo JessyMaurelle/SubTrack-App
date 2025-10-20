@@ -33,28 +33,6 @@
       "nextChargeDate": "2025-10-30"
     },
     {
-      "name": "nm1",
-      "category": "Streaming",
-      "cycle": "monthly",
-      "price": 10,
-      "currency": "EUR",
-      "status": "active",
-      "oldPrice": 0,
-      "nextChargeDate": "2025-11-14",
-      "id": "6c81"
-    },
-    {
-      "name": "no",
-      "category": "Streaming",
-      "cycle": "monthly",
-      "price": 45,
-      "currency": "EUR",
-      "status": "active",
-      "oldPrice": 0,
-      "nextChargeDate": "2025-11-14",
-      "id": "823a"
-    },
-    {
       "id": "9478",
       "name": "fitx",
       "category": "Streaming",
@@ -83,6 +61,146 @@
       "currency": "EUR",
       "status": "active",
       "nextChargeDate": "2025-11-13"
+    },
+    {
+      "id": "21b4",
+      "name": "jhg",
+      "category": "Streaming",
+      "cycle": "yearly",
+      "price": 1,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2026-10-16"
+    },
+    {
+      "id": "4fee",
+      "name": "izguj",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 0,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-16"
+    },
+    {
+      "id": "cbed",
+      "name": "abc",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 0,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-16"
+    },
+    {
+      "id": "76d0",
+      "name": "FHJK",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 0,
+      "currency": "EUR",
+      "status": "paused",
+      "nextChargeDate": "2025-11-17"
+    },
+    {
+      "id": "c233",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "e253",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "e096",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "fc7d",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "eb60",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "e372",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "9276",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "0653",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "d537",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "8165",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
     }
   ]
 }

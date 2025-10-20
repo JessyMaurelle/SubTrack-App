@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "types": ["node"],
+      "moduleResolution": "node",
+      "module": "esnext",
+      "target": "esnext"
+    },
+    "include": [
+      "playwright.config.ts",
+      "tests/**/*.ts"
+    ]
+  }
+  

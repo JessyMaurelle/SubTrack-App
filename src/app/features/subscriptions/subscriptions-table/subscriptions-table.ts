@@ -109,6 +109,11 @@ private load():void{
     next: (rows) => {
       this.subscriptions.set(rows??[]);
       this.loading.set(false);
+      // ✅ Revenir automatiquement à la première page à chaque rechargement
+      if (this.paginator) {
+      this.paginator.firstPage();
+      }
+
     },
     error: () => this.loading.set(false)
   });
@@ -133,6 +138,7 @@ onAdd(){
       this.api.createSubscription(result).subscribe((newSub)=> {
         //this.subscriptions.update((subs) => [...subs, newSub]);        
         this.load();
+        setTimeout(() => this.paginator.firstPage(), 300);
         this.showMessage('✅ Subscription added successfully!', 'success');
     });
     }
@@ -148,6 +154,7 @@ onEdit(row:Subscription){
     if(result){
       this.api.updateSubscription(row.id,result).subscribe(()=> {
         this.load();
+        setTimeout(() => this.paginator.firstPage(), 300);
         this.showMessage('✅ Subscription updated successfully!', 'success');
     });
     }
@@ -171,6 +178,7 @@ onDelete(row:Subscription){
         if (result) {
           this.api.deleteSubscription(row.id).subscribe(() => {
             this.load();
+            setTimeout(() => this.paginator.firstPage(), 300);
             this.showMessage('🗑️ Subscription deleted!', 'error');
           });
         }
