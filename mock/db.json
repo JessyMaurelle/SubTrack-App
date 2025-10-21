@@ -15,11 +15,11 @@
       "name": "Spotify",
       "category": "Music",
       "cycle": "Monthly",
-      "price": 19,
+      "price": 18,
       "currency": "EUR",
       "status": "Active",
-      "oldPrice": 9.99,
-      "nextChargeDate": "2025-11-05",
+      "oldPrice": 19,
+      "nextChargeDate": "2025-11-21",
       "id": "2"
     },
     {
@@ -51,16 +51,6 @@
       "currency": "EUR",
       "status": "active",
       "nextChargeDate": "2026-10-13"
-    },
-    {
-      "id": "6820",
-      "name": "ER",
-      "category": "Streaming",
-      "cycle": "monthly",
-      "price": 44,
-      "currency": "EUR",
-      "status": "active",
-      "nextChargeDate": "2025-11-13"
     },
     {
       "id": "21b4",
@@ -143,26 +133,6 @@
       "nextChargeDate": "2025-11-20"
     },
     {
-      "id": "e372",
-      "name": "Playwright Test",
-      "category": "Streaming",
-      "cycle": "monthly",
-      "price": 19.99,
-      "currency": "EUR",
-      "status": "active",
-      "nextChargeDate": "2025-11-20"
-    },
-    {
-      "id": "9276",
-      "name": "Playwright Test",
-      "category": "Streaming",
-      "cycle": "monthly",
-      "price": 19.99,
-      "currency": "EUR",
-      "status": "active",
-      "nextChargeDate": "2025-11-20"
-    },
-    {
       "id": "0653",
       "name": "Playwright Test",
       "category": "Streaming",
@@ -193,11 +163,11 @@
       "nextChargeDate": "2025-11-20"
     },
     {
-      "id": "912c",
-      "name": "Playwright Test",
+      "id": "5072",
+      "name": "bnnn",
       "category": "Streaming",
       "cycle": "monthly",
-      "price": 19.99,
+      "price": 44,
       "currency": "EUR",
       "status": "active",
       "nextChargeDate": "2025-11-21"
