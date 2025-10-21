@@ -20,6 +20,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/subtrack-frontend",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
