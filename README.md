@@ -1,9 +1,4 @@
 
-# 🧠 SubTrack App
-
-[![CI/CD Build Status](https://github.com/JessyMaurelle/SubTrack-App/actions/workflows/deploy.yml/badge.svg)](https://github.com/JessyMaurelle/SubTrack-App/actions/workflows/deploy.yml)
-
-Application Angular de gestion d'abonnements, avec CI/CD automatisé sur **GitHub Actions** et déploiement sur **Vercel** 🚀
 
 # 🧠 SubTrack App  
 [![CI/CD Build Status](https://github.com/JessyMaurelle/SubTrack-App/actions/workflows/deploy.yml/badge.svg)](https://github.com/JessyMaurelle/SubTrack-App/actions/workflows/deploy.yml)  
