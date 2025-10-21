@@ -39,7 +39,7 @@ jobs:
       - name: Verify deployment
         run: |
           echo "⏳ Vérification du déploiement en ligne..."
-          DEPLOY_URL="https://subtrack-app.vercel.app"  # 🔁 Remplace par ton vrai lien Vercel
+          DEPLOY_URL="https://sub-track-app-green.vercel.app/dashboard"  # 🔁 Remplace par ton vrai lien Vercel
           STATUS_CODE=$(curl -s -o /dev/null -w "%{http_code}" $DEPLOY_URL)
           if [ $STATUS_CODE -eq 200 ]; then
             echo "✅ Déploiement vérifié avec succès ! ($STATUS_CODE)"
