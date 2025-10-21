@@ -103,16 +103,6 @@
       "nextChargeDate": "2025-11-17"
     },
     {
-      "id": "c233",
-      "name": "Playwright Test",
-      "category": "Streaming",
-      "cycle": "monthly",
-      "price": 19.99,
-      "currency": "EUR",
-      "status": "active",
-      "nextChargeDate": "2025-11-20"
-    },
-    {
       "id": "e253",
       "name": "Playwright Test",
       "category": "Streaming",
@@ -201,6 +191,16 @@
       "currency": "EUR",
       "status": "active",
       "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "912c",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-21"
     }
   ]
 }
