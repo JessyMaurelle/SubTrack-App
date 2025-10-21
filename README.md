@@ -5,62 +5,167 @@
 
 Application Angular de gestion d'abonnements, avec CI/CD automatisé sur **GitHub Actions** et déploiement sur **Vercel** 🚀
 
-# SubtrackFrontend
+# 🧠 SubTrack App  
+[![CI/CD Build Status](https://github.com/JessyMaurelle/SubTrack-App/actions/workflows/deploy.yml/badge.svg)](https://github.com/JessyMaurelle/SubTrack-App/actions/workflows/deploy.yml)  
+![Angular](https://img.shields.io/badge/Angular-18-red?logo=angular)
+![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?logo=vercel)
+![Playwright](https://img.shields.io/badge/Tested_with-Playwright-green?logo=playwright)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
+---
 
-## Development server
+## 🌍 Live Demo
+🖥️ [**Visit the live app on Vercel**](https://subtrack-app.vercel.app)
 
-To start a local development server, run:
+---
 
+## 📖 Overview
+
+**SubTrack App** is a modern **Angular web application** designed to help users **track and manage their subscriptions** (e.g., Netflix, Spotify, etc.) easily and efficiently.  
+It provides clear insights into your subscriptions — categories, renewal dates, payment cycles, and more.
+
+This project includes a **complete CI/CD pipeline**:
+- ✅ **End-to-End testing** with **Playwright**
+- 🧱 **Automated Angular build**
+- 🚀 **Continuous deployment** on **Vercel**
+- 🔍 **Automatic deployment verification (HTTP 200)**
+
+---
+
+## 🧩 Main Features
+
+- 📅 Manage subscriptions: add, edit, and delete  
+- 💶 Automatic total calculation (monthly & yearly)  
+- 🔔 Highlight upcoming renewals and price increases  
+- 🔎 Filter and search subscriptions by name, category, and status  
+- 📈 Interactive table with sorting and pagination  
+- ⚙️ Settings page for language and currency selection  
+- 🧠 Built using **Angular Signals** for reactive state management  
+- 🧪 End-to-end testing powered by **Playwright**
+
+---
+
+## 🧠 Tech Stack
+
+| Category | Technology |
+|-----------|-------------|
+| Framework | Angular 18 |
+| UI Library | Angular Material |
+| Language | TypeScript |
+| State Management | Angular Signals |
+| Mock Backend | JSON Server |
+| E2E Tests | Playwright |
+| CI/CD | GitHub Actions + Vercel |
+| Hosting | Vercel |
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the project
 ```bash
+git clone https://github.com/JessyMaurelle/SubTrack-App.git
+cd SubTrack-App
+2️⃣ Install dependencies
+bash
+Code kopieren
+npm install
+3️⃣ Start the mock backend
+bash
+Code kopieren
+npm run api
+Default server runs on http://localhost:3001
+
+4️⃣ Run the Angular app
+bash
+Code kopieren
 ng serve
-```
+Open http://localhost:4200
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+🧪 End-to-End Testing (Playwright)
+Run tests
+bash
+Code kopieren
+npx playwright test --ui
+Generate an HTML report
+bash
+Code kopieren
+npx playwright show-report
+Test coverage includes:
 
-## Code scaffolding
+Page rendering and navigation
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Adding, editing, and deleting subscriptions
 
-```bash
-ng generate component component-name
-```
+Table loading and data visibility
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Pagination and filtering
 
-```bash
-ng generate --help
-```
+⚡ Continuous Integration / Continuous Deployment (CI/CD)
+Trigger
+Each push to the main branch will automatically:
 
-## Building
+Install dependencies
 
-To build the project run:
+Run Playwright tests
 
-```bash
-ng build
-```
+Build the Angular project
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Deploy the app on Vercel
 
-## Running unit tests
+Verify that the app is online (HTTP 200 check)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Example GitHub Actions workflow:
+(see .github/workflows/deploy.yml)
 
-```bash
-ng test
-```
+yaml
+Code kopieren
+- name: Verify deployment (HTTP 200)
+  run: |
+    DEPLOY_URL="https://subtrack-app.vercel.app"
+    STATUS_CODE=$(curl -s -o /dev/null -w "%{http_code}" $DEPLOY_URL)
+    if [ $STATUS_CODE -eq 200 ]; then
+      echo "✅ Deployment successful ($STATUS_CODE)"
+    else
+      echo "❌ Deployment failed ($STATUS_CODE)"
+      exit 1
+    fi
 
-## Running end-to-end tests
+🧱 Best Practices
+Uses Signals instead of BehaviorSubject or NgRx
 
-For end-to-end (e2e) testing, run:
+Clean, reusable, and well-documented components
 
-```bash
-ng e2e
-```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+🔐 Environment Variables
+To enable automated deployment, create a GitHub secret:
 
-## Additional Resources
+Key	Description
+VERCEL_TOKEN	Your personal Vercel token (from Vercel → Account Settings → Tokens)
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🧑‍💻 Author
+👤 Jessy Maurelle
+💼 Frontend Developer (Angular)
+🌐 GitHub Profile
+
+🪪 License
+This project is licensed under the MIT License — free to use, modify, and distribute.
+
+✨ Built with love using Angular, Material, and Playwright ❤️
+
+yaml
+Code kopieren
+
+---
+
+### ✅ Highlights of this English version:
+- Native and recruiter-friendly phrasing  
+- Clear structure (Overview → Setup → Tests → CI/CD → Author)  
+- Perfect for showcasing on **GitHub**, **LinkedIn**, or in a **portfolio**  
+- Keeps a professional tone without jargon overload  
+
+
+
+
+
+
