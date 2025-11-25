@@ -1,0 +1,20 @@
+<!-- app.component.html -->
+ 
+ <mat-toolbar class="header" color="primary">
+  <span class="logo">SubtrackApp</span>
+ 
+    
+  <a mat-button routerLink="/dashboard" routerLinkActive="active-link" >
+    <mat-icon>dashboard</mat-icon>Dashboard
+  </a>
+  <a mat-button routerLink="/subscriptions" routerLinkActive="active-link">
+    <mat-icon>list_all</mat-icon>Subscriptions</a>
+  <a mat-button routerLink="/settings" routerLinkActive="active-link">
+    <mat-icon>settings</mat-icon>Settings</a>
+
+</mat-toolbar>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+

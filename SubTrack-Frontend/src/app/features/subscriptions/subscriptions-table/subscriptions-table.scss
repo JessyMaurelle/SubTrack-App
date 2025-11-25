@@ -1,0 +1,106 @@
+
+.filter-field{
+  flex-direction: column; 
+  display: flex; 
+  flex: auto;
+  margin: 5px;
+}
+.filters{
+    display: flex;
+    gap: 16px;
+}
+button[mat-stroked-button] {
+    border-radius: 5px;
+}
+
+.abo{
+    font-weight: 500;
+    
+}
+.spacer {
+    flex: 1 1 auto;
+  }
+
+button[mat-raised-button]{
+    border-radius: 15px;
+    background-color:lightgray;
+    color: #111827;
+} 
+mat-chip {
+    color: #fff !important; ;
+    font-weight: 600;
+    
+    padding: 4px 12px;
+  }
+  
+  /* Couleurs par statut */
+  ::ng-deep  mat-chip.active {
+    background-color: #111827 !important; /* vert */
+    color: #fff !important; 
+  }
+  
+  ::ng-deep  mat-chip.paused {
+    background-color: lightgray !important; /* orange */
+    color: #111827 !important;
+  }
+  
+  ::ng-deep mat-chip.canceled {
+    background-color: #ef4444 !important; /* rouge */
+  }
+  
+  button[mat-icon-button] .mat-icon {
+    color: inherit;
+  }
+  
+  button[mat-icon-button].delete-btn .mat-icon {
+    color: #e53935; /* rouge Material */
+  }
+
+  .success-snackbar {
+    background-color: #4caf50 !important; /* vert */
+    color: #fff !important;
+    font-weight: 600;
+  }
+  
+  .error-snackbar {
+    background-color: #f44336 !important; /* rouge */
+    color: #fff !important;
+    font-weight: 600;
+  }
+
+  /* Prix barré en gris */
+.old-price {
+    text-decoration: line-through;
+    color: #9ca3af; /* gris clair */
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  
+  /* Nouveau prix en gras */
+  .new-price {
+    font-weight: 600;
+    color: #111827; /* gris foncé proche noir */
+    font-size: 15px;
+  }
+  
+  /* Badge rouge Hausse */
+  .badge.hausse {
+    background-color: #dc2626; /* rouge vif */
+    color: #fff !important;
+    font-weight: 600;
+    padding: 2px 8px;
+    
+    font-size: 12px;
+    margin-left: 8px;
+  }
+  
+    /* Badge red soon */
+    .badge-soon {
+       background-color: #ef4444;
+        font-weight: 600;
+        padding: 2px 8px;
+        
+        font-size: 12px;
+        margin-left: 8px;
+      }
+  

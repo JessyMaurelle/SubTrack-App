@@ -1,0 +1,156 @@
+<div class="filters">
+  <!-- Search -->
+   <div class="filter-field">
+    <label class="field-label">Search</label>
+    <mat-form-field appearance="outline">
+    <input matInput [value]="search()"  (input)="search.set($event.target.value.trim().toLowerCase())" placeholder="Ex: Netflix">
+    <button mat-icon-button *ngIf="search()" matSuffix (click)="clearSearch()" >
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  </div>
+   <!-- Category -->
+   <div class="filter-field">
+    <label class="field-label">Category</label>
+    <mat-form-field appearance="outline">
+      <mat-select [(value)]="selectedCategory" (selectionChange)="applyCategoryFilter($event.value)">
+      <mat-option value="">All</mat-option>
+      <mat-option *ngFor="let cat of categories" [value]="cat">{{cat}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+   </div>
+  <!-- Statut -->
+  <div class="filter-field">
+    <label class="field-label">Status</label>
+    <mat-form-field appearance="outline">
+      <mat-select [(value)]="selectedStatus" (selectionChange)="applyStatusFilter($event.value)">
+        <mat-option value="">All</mat-option>
+        <mat-option value="active">Active</mat-option>
+        <mat-option value="paused">Paused</mat-option>
+        <mat-option value="canceled">Canceled</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <!-- Bouton Réinitialise -->
+  <div class="filter-field">
+    <button mat-stroked-button color="primary" (click)="resetFilters()">
+      Réinitialise
+    </button>
+  </div>
+</div>
+
+
+<mat-toolbar color="primary">
+  <span class="abo">Abonnements</span>
+  <span class="spacer"></span>
+  <button mat-raised-button color="accent" (click)="onAdd()"><mat-icon>add</mat-icon>Ajouter</button>
+</mat-toolbar>
+
+
+<div *ngIf="!loading() && !error()">
+<table mat-table [dataSource]="paginatedSubscriptions()" matSort class="mat-elevation-z2"
+       class="mat-elevation-z8">
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header >
+      Name
+    </th>
+    <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+  </ng-container>
+
+  <!-- Category Column -->
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header >
+      Category
+    </th>
+    <td mat-cell *matCellDef="let row"> {{row.category}} </td>
+  </ng-container>
+
+  <!-- Cycle Column -->
+  <ng-container matColumnDef="cycle">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header >
+      Cycle
+    </th>
+    <td mat-cell *matCellDef="let row"> {{row.cycle?.toLowerCase() === 'monthly'?'Monthly':'Yearly' }} </td>
+  </ng-container>
+
+  <!-- Price Column -->
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header >
+      Price
+    </th>
+    <td mat-cell *matCellDef="let row"> 
+        <!-- Si on a un oldPrice -->
+    <span *ngIf="row.oldPrice && row.price > row.oldPrice" class="price-change">
+      <span class="old-price">{{ row.oldPrice | number:'1.2-2' }} €</span>
+      <span class="new-price">{{ row.price | number:'1.2-2' }} €</span>
+      <mat-chip class="badge hausse">↑ Increase</mat-chip>
+    </span>
+    <!-- Sinon prix normal-->
+     <span *ngIf="!row.oldPrice || row.price<= row.oldPrice">
+    {{row.price| number:'1.2-2' }} €
+     </span>
+     </td>
+  </ng-container>
+
+  <!-- NextChargeDate Column -->
+  <ng-container matColumnDef="nextChargeDate">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header >
+      NextChargeDate
+    </th>
+    <td mat-cell *matCellDef="let row"> {{row.nextChargeDate | date:'dd/MM/yyyy'}}
+      <!-- Badge Bientôt -->
+    <mat-chip *ngIf="nextFive().includes(row.id)" class="badge-soon">
+      Very Soon
+    </mat-chip>
+   </td>
+  </ng-container>
+
+    <!-- Status Column -->
+    <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header >
+          Status
+        </th>
+        <td mat-cell *matCellDef="let row"> 
+            <mat-chip-listbox>
+              <mat-chip  [ngClass]="{
+                'active': row.status === 'active',
+                'paused': row.status === 'paused',
+                'canceled':row.status === 'canceled'
+                }">  {{row.status | titlecase}}
+              </mat-chip>
+            </mat-chip-listbox>
+        </td>
+      </ng-container>
+
+      <!-- Actions Column -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header >
+      Actions
+    </th>
+    <td mat-cell *matCellDef="let row"> 
+        <button mat-icon-button matTooltip="Update" (click)="onEdit(row)">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button class="delete-btn" matTooltip="Delete" (click)="onDelete(row)">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator 
+  [length]="filteredSubscriptions().length"
+  [pageSize]="pageSize()"
+  [pageSizeOptions]="[5, 10, 20]"
+  (page)="onPageChange($event)">
+</mat-paginator>
+<!--[pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements"> -->
+  
+</div>

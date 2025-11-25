@@ -1,0 +1,51 @@
+.dashboard {
+    padding: 20px;
+  
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 20px;
+  
+      .card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 16px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  
+        h3 {
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+        p {
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+  
+    .content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 16px;
+  
+      .a-venir, .astuce {
+        background: #fff;
+        border-radius: 10px;
+        padding: 16px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          display: flex;
+          justify-content: space-between;
+          padding: 8px 0;
+          border-bottom: 1px solid #eee;
+        }
+      }
+    }
+  }
+  

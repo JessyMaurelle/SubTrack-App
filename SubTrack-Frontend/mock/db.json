@@ -1,0 +1,176 @@
+{
+  "subscriptions": [
+    {
+      "name": "Netflix",
+      "category": "Streaming",
+      "cycle": "Monthly",
+      "price": 22,
+      "currency": "EUR",
+      "status": "Active",
+      "oldPrice": 12.99,
+      "nextChargeDate": "2025-11-03",
+      "id": "1"
+    },
+    {
+      "name": "Spotify",
+      "category": "Music",
+      "cycle": "Monthly",
+      "price": 18,
+      "currency": "EUR",
+      "status": "Active",
+      "oldPrice": 19,
+      "nextChargeDate": "2025-11-21",
+      "id": "2"
+    },
+    {
+      "id": "2e7c",
+      "name": "jc",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 50,
+      "currency": "EUR",
+      "status": "paused",
+      "nextChargeDate": "2025-10-30"
+    },
+    {
+      "id": "9478",
+      "name": "fitx",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 20,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-03"
+    },
+    {
+      "id": "45b0",
+      "name": "kjljk",
+      "category": "Streaming",
+      "cycle": "yearly",
+      "price": 14,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2026-10-13"
+    },
+    {
+      "id": "21b4",
+      "name": "jhg",
+      "category": "Streaming",
+      "cycle": "yearly",
+      "price": 1,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2026-10-16"
+    },
+    {
+      "id": "4fee",
+      "name": "izguj",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 0,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-16"
+    },
+    {
+      "id": "cbed",
+      "name": "abc",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 0,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-16"
+    },
+    {
+      "id": "76d0",
+      "name": "FHJK",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 0,
+      "currency": "EUR",
+      "status": "paused",
+      "nextChargeDate": "2025-11-17"
+    },
+    {
+      "id": "e253",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "e096",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "fc7d",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "eb60",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "0653",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "d537",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "8165",
+      "name": "Playwright Test",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 19.99,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-20"
+    },
+    {
+      "id": "5072",
+      "name": "bnnn",
+      "category": "Streaming",
+      "cycle": "monthly",
+      "price": 44,
+      "currency": "EUR",
+      "status": "active",
+      "nextChargeDate": "2025-11-21"
+    }
+  ]
+}
