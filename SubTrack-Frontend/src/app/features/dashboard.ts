@@ -23,17 +23,24 @@ export class Dashboard {
 
       ngOnInit() {
         this.api.getAllSubscriptions().subscribe(data => {
-          this.subscriptions = data;
+          // 🧩 Normalisation des données reçues du backend
+      this.subscriptions = data.map(s => ({
+        ...s,
+        cycle: s.cycle ? s.cycle.charAt(0).toUpperCase() + s.cycle.slice(1).toLowerCase() : '',
+        status: s.status ? s.status.charAt(0).toUpperCase() + s.status.slice(1).toLowerCase() : '',
+        category: s.category ? s.category.charAt(0).toUpperCase() + s.category.slice(1).toLowerCase() : '',
+        price: s.price || 0
+      }));
     
           // total monthly
           this.totalMonthly= this.subscriptions
-            .filter(s => s.cycle === 'Monthly')
+            .filter(s => s.cycle.toLowerCase() === 'monthly')
             .reduce((sum, s) => sum + s.price, 0);
     
           // total yearly (abos yearly + monthly*12)
           this.totalYearly= this.subscriptions.reduce((sum, s) => {
-            if (s.cycle === 'Monthly') return sum + (s.price * 12);
-            if (s.cycle === 'Yearly') return sum + s.price;
+            if (s.cycle.toLowerCase() === 'monthly') return sum + (s.price * 12);
+            if (s.cycle.toLowerCase() === 'yearly') return sum + s.price;
             return sum;
           }, 0);
     

@@ -1,12 +1,12 @@
 export interface Subscription {
     id: string;
     name: string;
-    category: 'Streaming'|'Music'|'Internet'|'Phone'|'Cloud'|'Other';
-    cycle: 'Monthly'|'Yearly';
+    category: string;
+    cycle: string;
     price: number;
-    currency: 'EUR'|'USD';
+    currency: string;
     nextChargeDate: string;
-    status: 'Active'|'Paused'|'Canceled';
+    status: string;
     lastPrice?: number;
     createdAt: string;
     updatedAt: string;

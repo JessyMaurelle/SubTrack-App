@@ -9,7 +9,9 @@ import { Subscription } from './subscriptions.model';
 export class Subscriptions {
 
   private http = inject(HttpClient);  
-  private apiUrl: string = 'http://localhost:3001/subscriptions';
+  //private apiUrl: string = 'http://localhost:3001/subscriptions';
+  private apiUrl = 'http://localhost:8080/api/subscriptions';
+
 
   
   public getAllSubscriptions(): Observable<Subscription[]>{
