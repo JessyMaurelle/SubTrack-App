@@ -78,6 +78,32 @@ ng serve
 Open http://localhost:4200
 
 🧪 End-to-End Testing (Playwright)
+## 🧪 QA Testing Approach
+
+This project includes end-to-end testing using Playwright to ensure application reliability and stability.
+
+### Testing Strategy
+
+- Each test is independent and creates its own test data  
+- Core user flows are covered: Create, Edit, Delete, Filter  
+- Regression tests are executed to ensure existing features continue to work after changes  
+
+### What is tested
+
+- Form interactions (inputs, validation, submission)  
+- Dynamic UI components (tables, dropdowns, Angular Material)  
+- User interactions and data updates  
+- Visibility and correctness of displayed data  
+
+### Test Structure
+
+- Tests are written using Playwright Test Runner  
+- Stable selectors are used (`getByRole`, `locator`)  
+- Assertions ensure expected UI behavior (`expect`)  
+
+### Goal
+
+The goal is to simulate real user behavior and ensure that critical features remain functional across updates.
 Run tests
 bash
 Code kopieren
