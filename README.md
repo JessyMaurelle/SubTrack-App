@@ -77,10 +77,11 @@ Code kopieren
 ng serve
 Open http://localhost:4200
 
-🧪 End-to-End Testing (Playwright)
-## 🧪 QA Testing Approach
+## 🧪 End-to-End Testing (Playwright)
 
 This project includes end-to-end testing using Playwright to ensure application reliability and stability.
+
+## 🧪 QA Testing Approach
 
 ### Testing Strategy
 
@@ -104,14 +105,20 @@ This project includes end-to-end testing using Playwright to ensure application 
 ### Goal
 
 The goal is to simulate real user behavior and ensure that critical features remain functional across updates.
-Run tests
-bash
-Code kopieren
+
+---
+
+## ▶️ Run Tests
+
+```bash
+npx playwright test
+
+With UI
+
 npx playwright test --ui
 Generate an HTML report
-bash
-Code kopieren
 npx playwright show-report
+
 Test coverage includes:
 
 Page rendering and navigation
