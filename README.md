@@ -76,7 +76,7 @@ bash
 Code kopieren
 ng serve
 Open http://localhost:4200
-
+```
 ## 🧪 End-to-End Testing (Playwright)
 
 This project includes end-to-end testing using Playwright to ensure application reliability and stability.
@@ -118,6 +118,8 @@ With UI
 npx playwright test --ui
 Generate an HTML report
 npx playwright show-report
+
+```
 
 Test coverage includes:
 
