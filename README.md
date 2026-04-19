@@ -10,7 +10,7 @@
 ---
 
 ## 🌍 Live Demo
-🖥️ [**Visit the live app on Vercel**](https://subtrack-app.vercel.app)
+🖥️ [**Visit the live app on Vercel**](https://sub-track-app-green.vercel.app )
 
 ---
 
